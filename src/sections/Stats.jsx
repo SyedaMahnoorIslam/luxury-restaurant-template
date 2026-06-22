@@ -5,7 +5,7 @@ import statsData from '../data/statsData';
 /* ─── Constants ─────────────────────────────────────────────── */
 const EASE_CINEMATIC = [0.22, 1, 0.36, 1];
 const COUNTUP_DURATION = 2200; // ms
-const COUNTUP_FPS      = 60;
+const COUNTUP_FPS = 60;
 
 /* ─── CountUp Hook ───────────────────────────────────────────── */
 /**
@@ -14,17 +14,17 @@ const COUNTUP_FPS      = 60;
  */
 function useCountUp(end, { decimals = 0, duration = COUNTUP_DURATION, trigger = true } = {}) {
   const [display, setDisplay] = useState('0');
-  const rafRef    = useRef(null);
-  const startRef  = useRef(null);
+  const rafRef = useRef(null);
+  const startRef = useRef(null);
   const prevTrigger = useRef(false);
 
   useEffect(() => {
     if (!trigger || prevTrigger.current) return;
     prevTrigger.current = true;
 
-    const interval = duration / COUNTUP_FPS;
-    const steps    = Math.round(duration / interval);
-    let   step     = 0;
+    // const interval = duration / COUNTUP_FPS;
+    // const steps    = Math.round(duration / interval);
+    // let   step     = 0;
 
     const tick = (timestamp) => {
       if (!startRef.current) startRef.current = timestamp;
@@ -53,7 +53,7 @@ function useCountUp(end, { decimals = 0, duration = COUNTUP_DURATION, trigger = 
 /* ─── Single Stat Card ───────────────────────────────────────── */
 const StatCard = ({ stat, index, isInView }) => {
   const decimals = stat.isDecimal ? 1 : 0;
-  const count    = useCountUp(stat.numericEnd, { decimals, trigger: isInView });
+  const count = useCountUp(stat.numericEnd, { decimals, trigger: isInView });
   const displayValue = isInView
     ? `${count}${stat.suffix || ''}`
     : `0${stat.suffix || ''}`;
@@ -139,7 +139,7 @@ const StatCard = ({ stat, index, isInView }) => {
 /* ─── Stats Section ──────────────────────────────────────────── */
 const Stats = () => {
   const sectionRef = useRef(null);
-  const isInView   = useInView(sectionRef, { once: true, margin: '-10% 0px' });
+  const isInView = useInView(sectionRef, { once: true, margin: '-10% 0px' });
 
   return (
     <section

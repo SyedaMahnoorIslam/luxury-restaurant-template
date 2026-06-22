@@ -5,7 +5,9 @@ import statsData from '../data/statsData';
 /* ─── Constants ─────────────────────────────────────────────── */
 const EASE_CINEMATIC = [0.22, 1, 0.36, 1];
 const COUNTUP_DURATION = 2200; // ms
-const COUNTUP_FPS = 60;
+// const COUNTUP_FPS = 60;
+// const COUNTUP_FPS = 60;
+
 
 /* ─── CountUp Hook ───────────────────────────────────────────── */
 /**

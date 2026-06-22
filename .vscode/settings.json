@@ -1,0 +1,17 @@
+{
+  // Tell VS Code's CSS validator to ignore Tailwind's custom at-rules.
+  // These are valid at build-time via PostCSS — not standard CSS — so the
+  // built-in linter flags them incorrectly. This silences the false positives.
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  // Enable Tailwind CSS IntelliSense (requires the extension installed below)
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "javascriptreact": "javascriptreact"
+  }
+}

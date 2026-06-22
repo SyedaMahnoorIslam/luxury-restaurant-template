@@ -12,7 +12,47 @@ const COUNTUP_FPS = 60;
  * Animates a number from 0 → end once `trigger` becomes true.
  * Returns the display string (respects decimals).
  */
-function useCountUp(end, { decimals = 0, duration = COUNTUP_DURATION, trigger = true } = {}) {
+// function useCountUp(end, { decimals = 0, duration = COUNTUP_DURATION, trigger = true } = {}) {
+//   const [display, setDisplay] = useState('0');
+//   const rafRef = useRef(null);
+//   const startRef = useRef(null);
+//   const prevTrigger = useRef(false);
+
+//   useEffect(() => {
+//     if (!trigger || prevTrigger.current) return;
+//     prevTrigger.current = true;
+
+//     // const interval = duration / COUNTUP_FPS;
+//     // const steps    = Math.round(duration / interval);
+//     // let   step     = 0;
+
+//     const tick = (timestamp) => {
+//       if (!startRef.current) startRef.current = timestamp;
+//       const progress = Math.min((timestamp - startRef.current) / duration, 1);
+
+//       // Ease-out cubic
+//       const eased = 1 - Math.pow(1 - progress, 3);
+//       const value = eased * end;
+
+//       setDisplay(decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString());
+
+//       if (progress < 1) {
+//         rafRef.current = requestAnimationFrame(tick);
+//       } else {
+//         setDisplay(decimals > 0 ? end.toFixed(decimals) : end.toString());
+//       }
+//     };
+
+//     rafRef.current = requestAnimationFrame(tick);
+//     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+//   }, [trigger, end, decimals, duration]);
+
+//   return display;
+// }
+function useCountUp(
+  end,
+  { decimals = 0, duration = COUNTUP_DURATION, trigger = true } = {}
+) {
   const [display, setDisplay] = useState('0');
   const rafRef = useRef(null);
   const startRef = useRef(null);
@@ -22,19 +62,22 @@ function useCountUp(end, { decimals = 0, duration = COUNTUP_DURATION, trigger = 
     if (!trigger || prevTrigger.current) return;
     prevTrigger.current = true;
 
-    // const interval = duration / COUNTUP_FPS;
-    // const steps    = Math.round(duration / interval);
-    // let   step     = 0;
-
     const tick = (timestamp) => {
       if (!startRef.current) startRef.current = timestamp;
-      const progress = Math.min((timestamp - startRef.current) / duration, 1);
 
-      // Ease-out cubic
+      const progress = Math.min(
+        (timestamp - startRef.current) / duration,
+        1
+      );
+
       const eased = 1 - Math.pow(1 - progress, 3);
       const value = eased * end;
 
-      setDisplay(decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString());
+      setDisplay(
+        decimals > 0
+          ? value.toFixed(decimals)
+          : Math.round(value).toString()
+      );
 
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(tick);
@@ -44,7 +87,11 @@ function useCountUp(end, { decimals = 0, duration = COUNTUP_DURATION, trigger = 
     };
 
     rafRef.current = requestAnimationFrame(tick);
-    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      startRef.current = null;
+    };
   }, [trigger, end, decimals, duration]);
 
   return display;

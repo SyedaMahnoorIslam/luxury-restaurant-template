@@ -58,7 +58,7 @@ const Location = ({
           </div>
           <h2 className="heading-section text-white mb-5"
               style={{ fontFamily: "'Playfair Display', serif" }}>
-            Find Us at Bonfire
+            Find Us at Luxury
           </h2>
           <p className="body-text text-[#B3B3B3]">
             Experience refined dining in the heart of Rahim Yar Khan, where classic luxury meets warm local hospitality.
@@ -77,7 +77,7 @@ const Location = ({
             className="overflow-hidden border border-white/6 relative min-h-[400px]"
           >
             <iframe
-              title="Bonfire Restaurant Location"
+              title="Luxury Restaurant Location"
               src={mapSrc}
               className="w-full h-full min-h-[400px] border-0 grayscale brightness-75 contrast-125"
               allowFullScreen=""

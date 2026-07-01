@@ -65,7 +65,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-lg font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Bonfire
+                  Luxury
                 </p>
                 <p className="text-[9px] uppercase tracking-[0.3em] text-[#D4AF37]" style={{ fontFamily: "'Inter', sans-serif" }}>
                   Restaurant
@@ -186,7 +186,7 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#B3B3B3]/60"
              style={{ fontFamily: "'Inter', sans-serif" }}>
-            © {new Date().getFullYear()} Bonfire Restaurant. All rights reserved.
+            © {new Date().getFullYear()} Luxury Restaurant. All rights reserved.
           </p>
           <p className="text-xs text-[#B3B3B3]/40"
              style={{ fontFamily: "'Inter', sans-serif" }}>

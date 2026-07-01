@@ -54,7 +54,7 @@ const Testimonials = ({
           className="mt-16 text-center"
         >
           <p className="text-sm text-[#B3B3B3] mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
-            Join hundreds of satisfied guests who made Bonfire their choice
+            Join hundreds of satisfied guests who made Luxury their choice
           </p>
           <a href="#reservation" className="btn-primary">
             Make a Reservation

@@ -78,7 +78,7 @@ const ScrollCue = () => (
 
 /* ─── Hero ───────────────────────────────────────────────────── */
 const Hero = ({
-  brand           = 'Bonfire Restaurant',
+  brand           = 'Luxury Restaurant',
   headline        = 'Experience Culinary\nExcellence',
   subtext         = 'Discover premium flavors, exceptional hospitality and unforgettable dining experiences crafted for the most discerning guests.',
   backgroundImage = 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=90',

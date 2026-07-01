@@ -52,7 +52,7 @@ const FlameIcon = () => (
 
 /* ─── Component ──────────────────────────────────────────────── */
 const Navbar = ({
-  brand = 'Bonfire',
+  brand = 'Luxury',
   links = defaultLinks,
   whatsappNumber = '+1234567890',
   logoText,
@@ -115,7 +115,7 @@ const Navbar = ({
         {/* ── Logo ─────────────────────────────────────── */}
         <a
           href="#home"
-          aria-label="Bonfire Restaurant — Home"
+          aria-label="Luxury Restaurant — Home"
           className="group flex items-center gap-3 select-none"
         >
           <motion.div

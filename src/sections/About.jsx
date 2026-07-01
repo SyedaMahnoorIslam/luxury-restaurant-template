@@ -36,7 +36,7 @@ const pillars = [
 
 const About = ({
   title = 'A Refined Dining Experience',
-  description = 'Bonfire Restaurant blends contemporary luxury with rich local flavors, delivering unforgettable hospitality in Rahim Yar Khan.',
+  description = 'Luxury Restaurant blends contemporary luxury with rich local flavors, delivering unforgettable hospitality in Rahim Yar Khan.',
 }) => {
   return (
     <section id="about" className="bg-[#0F0F0F] py-24 lg:py-32 text-white relative overflow-hidden">
@@ -62,7 +62,7 @@ const About = ({
               <div className="overflow-hidden aspect-[4/3]">
                 <img
                   src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
-                  alt="Bonfire Restaurant elegant interior"
+                  alt="Luxury Restaurant elegant interior"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F]/60 to-transparent" />
@@ -78,7 +78,7 @@ const About = ({
             {/* Story text below image */}
             <div className="mt-10 pr-0 lg:pr-8">
               <p className="body-text leading-8 text-[#B3B3B3] mb-6">
-                At Bonfire Restaurant, every dish is crafted with premium ingredients, expert technique, and a dedication to authenticity. Our menu is designed for guests who seek an elevated culinary journey rooted in refined presentation and timeless elegance.
+                At Luxury Restaurant, every dish is crafted with premium ingredients, expert technique, and a dedication to authenticity. Our menu is designed for guests who seek an elevated culinary journey rooted in refined presentation and timeless elegance.
               </p>
               <p className="body-text leading-8 text-[#B3B3B3]">
                 From reserved seating to personalized menu recommendations, every moment is tailored to create memories that linger long after the last course.

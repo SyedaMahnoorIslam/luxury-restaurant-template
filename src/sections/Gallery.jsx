@@ -96,7 +96,7 @@ const Gallery = ({
                   >
                     <p className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] mb-1"
                        style={{ fontFamily: "'Inter', sans-serif" }}>
-                      Bonfire Signature
+                      Luxury Signature
                     </p>
                     <h3 className="text-lg font-bold text-white"
                         style={{ fontFamily: "'Playfair Display', serif" }}>

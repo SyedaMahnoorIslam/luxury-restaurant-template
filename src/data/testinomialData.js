@@ -4,7 +4,7 @@ const testimonials = [
     name: 'Fatima Ahmed',
     title: 'Event Organizer',
     initials: 'FA',
-    quote: 'Bonfire Restaurant elevated our corporate event beyond expectations. Every detail was impeccable—from the service to the cuisine.',
+    quote: 'Luxury Restaurant elevated our corporate event beyond expectations. Every detail was impeccable—from the service to the cuisine.',
   },
   {
     id: 'testimonial-2',
@@ -32,7 +32,7 @@ const testimonials = [
     name: 'Zara Hussain',
     title: 'Wedding Planner',
     initials: 'ZH',
-    quote: 'Bonfire Restaurant transformed our intimate wedding dinner into an unforgettable memory. Highly recommended for special occasions.',
+    quote: 'Luxury Restaurant transformed our intimate wedding dinner into an unforgettable memory. Highly recommended for special occasions.',
   },
   {
     id: 'testimonial-6',

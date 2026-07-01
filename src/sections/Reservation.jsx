@@ -23,7 +23,7 @@ const FormField = ({ label, htmlFor, children }) => (
 
 const Reservation = ({
   title = 'Reserve Your Table',
-  subtitle = 'Experience impeccable hospitality and an unforgettable evening at Bonfire Restaurant.',
+  subtitle = 'Experience impeccable hospitality and an unforgettable evening at Luxury Restaurant.',
 }) => {
   return (
     <section id="reservation" className="bg-[#171717] py-24 lg:py-32 text-white relative overflow-hidden">
